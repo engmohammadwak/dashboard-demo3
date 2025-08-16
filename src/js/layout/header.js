@@ -20,9 +20,10 @@ var KTLayoutHeader = function() {
         }
 
         sticky.on('kt.sticky.change', function() {
+            clearTimeout(timer);
             timer = setTimeout(function() {
-                KTMenu.updateDropdowns(); 
-            }, 300);              
+                KTMenu.updateDropdowns();
+            }, 300);
         });
     }
     
